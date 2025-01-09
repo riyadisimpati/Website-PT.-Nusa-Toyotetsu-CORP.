@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deskripsi Perusahaan - PT. NUSA TOYOTETSU CORP.</title>
+    <style>
+        /* Animasi bintang berkedip */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: black;
+            overflow-y: auto;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(black, #000080);
+            z-index: 0;
+        }
+
+        .stars span {
+            position: absolute;
+            display: block;
+            width: 2px;
+            height: 2px;
+            background: white;
+            animation: blink 2s infinite ease-in-out;
+            top: calc(100% * var(--y));
+            left: calc(100% * var(--x));
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header img {
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 1rem;
+            color: #FFD700;
+            text-shadow: 0 0 5px #FFD700;
+        }
+
+        .content {
+            margin: 2rem;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.2rem;
+        }
+
+        .navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem; /* Kerenggangan antar tombol */
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .navigation .btn {
+            position: relative;
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            color: white;
+            background-color: #008CBA;
+            border-radius: 5px;
+            font-weight: bold;
+            text-shadow: 0 0 10px white;
+            white-space: nowrap;
+            z-index: 1;
+            transition: transform 0.2s ease, background-color 0.3s ease, top 0.2s ease;
+        }
+
+        .navigation .btn:nth-child(odd) {
+            top: -0.5rem; /* Geser tombol ganjil ke atas */
+        }
+
+        .navigation .btn:nth-child(even) {
+            top: 0.5rem; /* Geser tombol genap ke bawah */
+        }
+
+        .navigation .btn:hover {
+            background-color: #005f73;
+            transform: scale(1.05); /* Membesarkan tombol saat hover */
+            z-index: 2; /* Tombol berada di atas saat dihover */
+            top: 0; /* Reset posisi hover */
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Latar belakang bintang -->
+    <div class="stars">
+        <script>
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('span');
+                star.style.setProperty('--x', Math.random());
+                star.style.setProperty('--y', Math.random());
+                document.querySelector('.stars').appendChild(star);
+            }
+        </script>
+    </div>
+
+    <!-- Kontainer untuk konten -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="C:\xampp\htdocs\WEBSITE PT. NUSA TOYOTETSU CORP\images\logo.png.jpg" alt="">
+            <h1>Deskripsi Perusahaan</h1>
+        </div>
+
+        <!-- Konten -->
+        <div class="content">
+            <p>
+                PT. NUSA TOYOTETSU CORP. adalah perusahaan manufaktur otomotif yang
+                berfokus pada produksi komponen berkualitas tinggi. Didirikan dengan
+                visi menjadi pemimpin dalam industri otomotif global, perusahaan kami
+                mengutamakan inovasi, efisiensi, dan keberlanjutan dalam setiap proses
+                produksi.
+            </p>
+            <p>
+                Dengan fasilitas produksi modern dan tim profesional berpengalaman, kami
+                terus berkomitmen untuk memberikan produk dan layanan terbaik kepada
+                pelanggan kami di seluruh dunia.
+            </p>
+            <p>
+                Kami percaya bahwa melalui kolaborasi dengan pelanggan dan komunitas,
+                kami dapat menciptakan nilai yang bermanfaat bagi semua pihak.
+            </p>
+        </div>
+
+        <!-- Navigasi -->
+        <div class="navigation">
+            <a href="index.html" class="btn">Halaman Utama</a>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+           
+    <p>© 2025 PT. NUSA TOYOTETSU. Hak Cipta Dilindungi.</p>
+
+
+        </footer>
+    </div>
+</body>
+</html>
